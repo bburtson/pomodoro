@@ -1,0 +1,76 @@
+﻿.display-card {
+  box-shadow: 10px 10px 5px #888888;
+  /*background-color: #ffecec;*/
+  border-radius: 10px;
+}
+
+#timer-display {
+  background: url("http://www.clker.com/cliparts/f/s/L/a/q/1/tomato2-md.png") no-repeat;
+  color: white;
+  background-size: 100% 200px;
+  padding-top: 90px;
+  padding-bottom: 95px;
+}
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: green; /* Otherwise white in Chrome */
+  height: 10px;
+  border-radius: 20px;
+}
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 40px;
+    width: 40px;
+    background: url('http://www.clker.com/cliparts/j/U/O/s/B/6/tomato.svg') no-repeat center center;
+    -webkit-background-size: 36px 36px;
+    -moz-background-size: 36px 36px;
+    -o-background-size: 36px 36px;
+    background-size: 36px 36px;
+    cursor: pointer;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  }
+
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    height: 40px;
+    width: 40px;
+    background: url('http://www.clker.com/cliparts/j/U/O/s/B/6/tomato.svg') no-repeat center center;
+    -webkit-background-size: 36px 36px;
+    -moz-background-size: 36px 36px;
+    -o-background-size: 36px 36px;
+    background-size: 36px 36px;
+    cursor: pointer;
+  }
+
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    height: 40px;
+    width: 40px;
+    background: url('http://www.clker.com/cliparts/j/U/O/s/B/6/tomato.svg') no-repeat center center;
+    -webkit-background-size: 36px 36px;
+    -moz-background-size: 36px 36px;
+    -o-background-size: 36px 36px;
+    background-size: 36px 36px;
+    cursor: pointer;
+  }

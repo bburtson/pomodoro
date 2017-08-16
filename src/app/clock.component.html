@@ -1,0 +1,36 @@
+﻿<div class="container">
+  <div class="col-xs-12">
+    <div class="display-card col-xs-12 col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 col-xl-2 col-xl-offset-5 bg-success">
+      <div *ngIf="!hasClockData" class="col-xs-12">
+        <h3 [innerText]="'Set minutes for ' + title"></h3>
+        <div class="col-xs-10 col-xs-offset-1">
+          <label for="minute-slider" class="fa-2x" [innerText]="minutes"></label>
+          <br /><br />
+          <input id="minute-slider" [(ngModel)]="minutes" type="range" min="1" max="60" />
+          <br /><br />
+        </div>
+        <br />
+        <div class="col-xs-12">
+          <button (click)="addClock()" class="btn btn-success"><i class="fa fa-arrow-right"></i></button>
+          <br /><br />
+        </div>
+      </div>
+      <div *ngIf="hasClockData">
+        <h3>{{title}} timer</h3>
+        <div id="timer-display" class="col-xs-8 col-xs-offset-2">
+          <span class="fa-2x col-xs-2" [innerText]="timer.minutes"></span>
+          <span class="fa-2x col-xs-2">&nbsp;:</span>
+          <span class="fa-2x col-xs-2" [innerText]="timer.seconds"></span>
+          <span class="fa-2x col-xs-2">&nbsp;:</span>
+          <span class="fa-2x col-xs-2" [innerText]="timer.milliseconds"></span>
+        </div>
+        <div class="col-xs-12">
+          <br /><br />
+          <button (click)="timer.start()" class="btn btn-success">Start</button>
+          <button (click)="timer.stop()" class="btn btn-danger">Stop</button>
+          <br /><br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
